@@ -1,0 +1,144 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+/* Color Pallete */
+:root {
+    --hue-neutral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+
+}
+
+body {
+    --hue: var(--hue-neutral);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--hue), 100%, 20%);
+}
+
+body.correct {
+    --hue: var(--hue-correct);
+}
+
+body.wrong {
+    --hue: var(--hue-wrong);
+}
+
+.container {
+   width: 800px;
+   max-width: 80%; 
+   background-color: white;
+   border-radius: 5px;
+   padding: 10px;
+   box-shadow: 0 0 10px 2px;
+}
+.container2 {
+    width: 800px;
+    max-width: 80%; 
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+ }
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+    --hue:var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+}
+
+.btn:hover {
+    border-color: black;
+}
+
+.btn.correct {
+    --hue:var(--hue-correct);
+    color: black;
+}
+
+.btn.wrong {
+    --hue:var(--hue-wrong);
+}
+
+.start-btn, .next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Allows me to hide buttons */
+.hide {
+  display: none;  
+}
+/* Timer styling */
+#timer {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#highscores-list {
+    list-style: none;
+    padding: 0;
+}
+
+#highscores-list li {
+    margin-bottom: 5px;
+}
+
+/* CSS to style the header containing highscores as a card */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+ul#highscores-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul#highscores-list li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+header:hover {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+}
+
+
